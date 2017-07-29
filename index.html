@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="main.css">
+      <script>
+      var clicks = 0;
+      var clickers = 0;
+          function clickevent() {
+              document.getElementById("x").innerHTML = "Clicks: " + clicks++;
+          }
+          function buyclicker() {
+              var clickercost = 10 * 1.5 * clickers
+              if (clicks >= clickercost) {
+                  clickers++;
+                  clicks = clicks - clickercost;
+                  document.getElementById("c").innerHTML = "Clickers:" + clickers;
+                  document.getElementById("x").innerHTML = "Clicks: " + clicks;
+              }
+              var nextcost =  10 * 1.5 * clickers
+              document.getElementById("cost").innerHTML = nextcost;
+          }
+      </script>
+      </head>
+    <body>
+        <a href="updates.html">SimpleClick <span class="badge">Alpha 1.1</span></a>
+        <button class="btn btn-success" onclick="clickevent()">Click</button>
+        <button class="btn btn-primary" onclick="buyclicker()">Buy Clicker</button><span id="cost">10</span>
+        <p id="x"></p>
+        <p id="c"></p>
+    </body>
+</html>

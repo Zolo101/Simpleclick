@@ -1,0 +1,30 @@
+@font-face {
+    font-family: titlefont;
+    src: url(/Fonts/SFPixelateShaded-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: alphaornormal;
+    src: url(/Fonts/SFPixelate.ttf);
+    font-weight: bold;
+}
+
+body {
+    background: url(background.png);
+    background-size: 100px 80px;
+    background-repeat: round;
+}
+
+button {
+    height: 40px;
+}
+
+#main {
+    margin: 20px;
+    padding: 2px;
+}
+
+#c {
+    color: steelblue;
+}
